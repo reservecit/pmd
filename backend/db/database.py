@@ -1,9 +1,11 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
+import os
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 # Replace with your actual DSN or connection string
 # DATABASE_URL = "postgresql+psycopg2://postgres:D%5BJMHZ%5B%243t0%23ZEs%40@127.0.0.1/pmd_dev"
-DATABASE_URL = "postgresql+psycopg2://postgres:D%5BJMHZ%5B%243t0%23ZEs%21@127.0.0.1/pmd_dev"
+# DATABASE_URL = "postgresql+psycopg2://postgres:D%5BJMHZ%5B%243t0%23ZEs%21@127.0.0.1/pmd_dev"
 # DATABASE_URL = "postgresql+psycopg2://postgres:your_encoded_password@127.0.0.1/pmd_dev"
 
 engine = create_engine(DATABASE_URL)
