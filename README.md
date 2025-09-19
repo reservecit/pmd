@@ -1,9 +1,8 @@
 # pmd
-
 Professional Member Directory (PMD)
 An MVP for AI-Based Directory Project that enable professional member discovery, profile management, and semantic search. Built with speed, clarity, and principled architecture.
 
-MVP Goals
+# MVP Goals
 - Enable public and member-facing profile discovery
 - Support semantic search via FAISS + MiniLM
 - Provide secure registration and role-based profile management
@@ -27,43 +26,45 @@ MVP Goals
 | Profile Edit (Timestamp Logging)   | PATCH endpoint + edit_events table for timestamps                                  | Minimal metadata, avoids bloat from storing diffs.                                        |
 | Member Facing Profile UI           | Same lightweight frontend approach as public UI                                    | Maintains shared component base.                                                          |
 
-Sprint Breakdown
 
-Sprint 1: Backend Foundation
+
+# Sprint Breakdown
+
+# Sprint 1: Backend Foundation
 - FastAPI setup
 - PostgreSQL connection via DSN
 - SQLAlchemy + Pydantic models
 - /profiles endpoint with mock data
 
-Sprint 2: Semantic Search
+# Sprint 2: Semantic Search
 - FAISS + MiniLM integration
 - Embedding generation
 - Vector DB connection
 
-Sprint 3: Frontend & AJAX Wiring
+# Sprint 3: Frontend & AJAX Wiring
 - Profile viewer UI
 - Semantic search interface
 - FastAPI → frontend wiring
 
-Sprint 4: Agentic Workflows
+# Sprint 4: Agentic Workflows
 - LangChain orchestration
 - Role-based agent logic
 - Ethical guardrails
 
-Sprint 5: Ethics & Governance
+# Sprint 5: Ethics & Governance
 - Consent logic
 - Transparency docs
 - Bias mitigation guidelines
 
-Sprint 6: Portfolio & Launch Prep
+# Sprint 6: Portfolio & Launch Prep
 - ESA wireframes + storytelling
 - Architecture summary
 - Public demo deployment
 
-Deployment Instructions
+# Deployment Instructions
 Coming soon: Render/Fly.io config, start script, and environment setup.
 
-Ethical Design Principles
+# Ethical Design Principles
 - Member control over visibility and consent
 - Transparent architecture decisions
 - Role-based access and agentic orchestration
