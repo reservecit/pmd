@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PMD Profile Viewer</title>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    .profile { border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem; }
+  </style>
+</head>
+<body x-data="profileViewer()">
+  <h1>Professional Member Directory</h1>
+  <template x-for="profile in profiles" :key="profile.id">
+    <div class="profile">
+      <h2 x-text="profile.name"></h2>
+      <p><strong>Title:</strong> <span x-text="profile.title"></span></p>
+      <p><strong>Bio:</strong> <span x-text="profile.bio"></span></p>
+      <p><strong>Skills:</strong> <span x-text="profile.skills.join(', ')"></span></p>
+    </div>
+  </template>
+
+  <script>
+    function profileViewer() {
+      return {
+        profiles: [],
+        async init() {
+          const res = await fetch("http://localhost:8000/profiles");
+          this.profiles = await res.json();
+        }
+      }
+    }
+  </script>
+</body>
+</html>
