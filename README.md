@@ -27,3 +27,44 @@ MVP Goals
 | Profile Edit (Timestamp Logging)   | PATCH endpoint + edit_events table for timestamps                                  | Minimal metadata, avoids bloat from storing diffs.                                        |
 | Member Facing Profile UI           | Same lightweight frontend approach as public UI                                    | Maintains shared component base.                                                          |
 
+Sprint Breakdown
+
+Sprint 1: Backend Foundation
+- FastAPI setup
+- PostgreSQL connection via DSN
+- SQLAlchemy + Pydantic models
+- /profiles endpoint with mock data
+
+Sprint 2: Semantic Search
+- FAISS + MiniLM integration
+- Embedding generation
+- Vector DB connection
+
+Sprint 3: Frontend & AJAX Wiring
+- Profile viewer UI
+- Semantic search interface
+- FastAPI → frontend wiring
+
+Sprint 4: Agentic Workflows
+- LangChain orchestration
+- Role-based agent logic
+- Ethical guardrails
+
+Sprint 5: Ethics & Governance
+- Consent logic
+- Transparency docs
+- Bias mitigation guidelines
+
+Sprint 6: Portfolio & Launch Prep
+- ESA wireframes + storytelling
+- Architecture summary
+- Public demo deployment
+
+Deployment Instructions
+Coming soon: Render/Fly.io config, start script, and environment setup.
+
+Ethical Design Principles
+- Member control over visibility and consent
+- Transparent architecture decisions
+- Role-based access and agentic orchestration
+- Bias mitigation and inclusive design
