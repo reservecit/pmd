@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from backend.db.database import SessionLocal  # changed from from db.database import SessionLocal
+from db.database import SessionLocal # changed back from... from backend.db.database import SessionLocal
 from models.profile import Profile as DBProfile
 from pydantic import BaseModel
 from typing import List
@@ -27,9 +27,10 @@ def get_db():
         db.close()
 
 # GET /profiles
-@router.get("/profiles", response_model=List[ProfileSchema])
-def get_profiles(db: Session = Depends(get_db)):
-    return db.query(DBProfile).all()
+@router.get("/profiles") # changed from... @router.get("/profiles", response_model=List[ProfileSchema])
+def get_profiles():  # changed from... get_profiles(db: Session = Depends(get_db))
+    return {"message": "Profiles endpoint is working"}
+    # return db.query(DBProfile).all()
 
 # POST /profiles
 @router.post("/profiles", response_model=ProfileSchema)
