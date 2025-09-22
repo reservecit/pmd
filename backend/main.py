@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.routes import profiles # tells Python to start from the top-level backend package and drill down (absolute import inside main.py)
+from backend.routes import profiles
 from db.database import Base, engine
 
 # Create tables
