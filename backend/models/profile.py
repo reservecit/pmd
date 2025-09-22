@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, ARRAY
-from db.database import Base
+from db.database import SessionLocal # changed from from db.database import Base
 
 class Profile(Base):
     __tablename__ = "profiles"
