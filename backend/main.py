@@ -1,3 +1,8 @@
+import os, sys
+
+# Ensure pmd/ is always on Python’s import path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from fastapi import FastAPI
 from backend.routes import profiles
 from fastapi.middleware.cors import CORSMiddleware
