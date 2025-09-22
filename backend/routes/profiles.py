@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from db.database import SessionLocal
+from backend.db.database import SessionLocal  # changed from from db.database import SessionLocal
 from models.profile import Profile as DBProfile
 from pydantic import BaseModel
 from typing import List
