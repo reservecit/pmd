@@ -1,12 +1,12 @@
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
 from backend.routes import profiles
+from fastapi.middleware.cors import CORSMiddleware
 from db.database import Base, engine
 
 # Create tables
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="PMD Directory")
+app = FastAPI()  # removed title="PMD Directory" from FastAPI(title="PMD Directory")
 
 # CORS
 app.add_middleware(
